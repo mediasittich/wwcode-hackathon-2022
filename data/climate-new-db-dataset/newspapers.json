@@ -1,0 +1,98 @@
+{
+  "guardian": {
+    "name": "guardian",
+    "fancy_name": "The Guardian",
+    "newspaper_url": "theguardian.com",
+    "color": "#052962"
+  },
+  "nytimes": {
+    "name": "nytimes",
+    "fancy_name": "The New York Times",
+    "newspaper_url": "nytimes.com",
+    "color": "#FFFFFF"
+  },
+  "aljazeera": {
+    "name": "aljazeera",
+    "fancy_name": "Al Jazeera",
+    "newspaper_url": "aljazeera.com",
+    "color": "#FA9000"
+  },
+  "dw": {
+    "name": "dw",
+    "fancy_name": "Deutsche Welle",
+    "newspaper_url": "dw.com/en",
+    "color": "#0098FF"
+  },
+  "cnn": {
+    "name": "cnn",
+    "fancy_name": "CNN",
+    "newspaper_url": "cnn.com",
+    "color": "#CC0000"
+  },
+  "bbc": {
+    "name": "bbc",
+    "fancy_name": "The BBC",
+    "newspaper_url": "bbc.com",
+    "color": "#0098FF"
+  },
+  "fox": {
+    "name": "fox",
+    "fancy_name": "Fox News",
+    "newspaper_url": "foxnews.com",
+    "color": "#003366"
+  },
+  "skyau": {
+    "name": "skyau",
+    "fancy_name": "Sky News Australia",
+    "newspaper_url": "skynews.com.au",
+    "color": "#93A681"
+  },
+  "stuff": {
+    "name": "stuff",
+    "fancy_name": "Stuff.co.nz",
+    "newspaper_url": "stuff.co.nz",
+    "color": "#00C386"
+  },
+  "newshub": {
+    "name": "newshub",
+    "fancy_name": "NewsHub.co.nz",
+    "newspaper_url": "newshub.co.nz",
+    "color": "#ED1C24"
+  },
+  "atlantic": {
+    "name": "atlantic",
+    "fancy_name": "The Atlantic",
+    "newspaper_url": "theatlantic.com",
+    "color": "#FA9000"
+  },
+  "nzherald": {
+    "name": "nzherald",
+    "fancy_name": "The New Zealand Herald",
+    "newspaper_url": "nzherald.co.nz",
+    "color": "#052962"
+  },
+  "economist": {
+    "name": "economist",
+    "fancy_name": "The Economist",
+    "newspaper_url": "economist.com",
+    "color": "#E3120B"
+  },
+  "dailymail": {
+    "name": "dailymail",
+    "fancy_name": "The Daily Mail",
+    "newspaper_url": "https://www.dailymail.co.uk",
+    "color": "#004DB3"
+  },
+  "independent": {
+    "name": "independent",
+    "fancy_name": "The Independent",
+    "newspaper_url": "independent.co.uk",
+    "color": "#E30D24"
+  },
+  "washington_post": {
+    "name": "washington_post",
+    "fancy_name": "The Washington Post",
+    "newspaper_url": "washingtonpost.com",
+    "color": "#000000"
+  }
+}
