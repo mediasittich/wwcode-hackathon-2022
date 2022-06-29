@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Large climate news dataset
+data/climate-news-db-all.csv
