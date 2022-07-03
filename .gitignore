@@ -129,4 +129,19 @@ dmypy.json
 .pyre/
 
 # Large climate news dataset
-data/climate-news-db-all.csv
+
+data/climate-new-db-dataset.zip
+./data/climate-new-db-dataset/articles/cnn.jsonlines
+./data/climate-new-db-dataset/articles/nzherald.jsonlines
+./data/climate-new-db-dataset/articles/independent.jsonlines
+./data/climate-new-db-dataset/db.sqlite
+./data/WebNewsEnglishSnippets.2020.csv
+./data/fake-news.zip
+./data/fake-news/train.csv
+./data/climate-news-db-all.csv
+./data/news_cleaned_tokens.csv
+./data/climate_data_jean.csv
+./data/submission_with_ML_labels.csv
+./data/vader_sentiment.csv
+./data/fn_test_cleaned.csv
+./data/fn_train_cleaned.csv
