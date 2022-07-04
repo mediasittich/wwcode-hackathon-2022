@@ -1,31 +1,22 @@
 import streamlit as st
 import pandas as pd
-import sklearn
+from viz import *
 
 def get_prediction(user_text):
-    # sample classifier
-    # run model prediction
-    from sklearn.model_selection import train_test_split
-    from sklearn.feature_extraction.text import CountVectorizer
-    from sklearn.naive_bayes import MultinomialNB
-
-    train_df = pd.read_csv('data/fake-news/train.csv')
-    test_df = pd.read_csv('data/fake-news/train.csv')
-    train_df = train_df.iloc[:1000]
-    test_df = test_df.iloc[:1000]
-    train_df = train_df.fillna(" ")
-    x = train_df['text']
-    y = train_df['label']
-    x, x_test, y, y_test = train_test_split(x,y, stratify=y, test_size=0.25, random_state=42)
-    # Vectorize text reviews to numbers
-    vec = CountVectorizer(stop_words='english')
-    x = vec.fit_transform(x).toarray()
-    x_test = vec.transform(x_test).toarray()
-    model = MultinomialNB()
-    model.fit(x, y)
+    """
+    Input: any string
+    Returns: model predictions
+    """
+    import pickle
+    # get model and vectorizer from pickle file
+    with open('data/logreg.pkl', 'rb') as file:  
+        logreg = pickle.load(file)
+    with open('data/vec.pkl', 'rb') as file:
+        vec = pickle.load(file)
+    # get predictions
     text = vec.transform([user_text])
-    preds = model.predict(text)
-    proba = model.predict_proba(text)
+    preds = logreg.predict(text)
+    proba = logreg.predict_proba(text)
     return preds[0], proba
 
 
@@ -33,8 +24,7 @@ st.title("Fake News Classifier")
 
 # get user to enter news
 user_input = st.text_area("Enter news: ", "", 
-help="Enter some news here to find out how accurate the information is.", 
-height=10)
+help="Enter some news here to find out how accurate the information is.", height=60)
 
 classify_button = st.button("Submit")
 
@@ -45,4 +35,13 @@ if classify_button:
         st.warning("The text is {:.2%} likely to be inaccurate!".format(proba[0][1]))
     if results == 0:
         st.success("The text is {:.2%} likely to be accurate!".format(proba[0][0]))
+
+    st.subheader("Text Analysis:")
+    # create and generate a word cloud image:
+    create_wordcloud(user_input)
+    # create bigram
+    create_bigram(user_input)
+    # sentiment analysis
+    get_sentiment(user_input)
+
 
