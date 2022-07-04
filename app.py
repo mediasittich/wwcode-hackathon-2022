@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import sklearn
 
 def get_prediction(user_text):
     # sample classifier
