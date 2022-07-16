@@ -21,6 +21,10 @@ def get_prediction(user_text):
 
 
 st.title("Fake News Classifier")
+st.write("""Recent studies have shown that credible and positive climate news reporting can change \
+people’s viewpoints on climate change, particularly for people who oppose climate action. \
+In order to make people aware of fake news, we use methods from natural language processing,  \
+statistics and machine learning to inform users about the credibility of a given climate news article.""")
 
 # get user to enter news
 user_input = st.text_area("Enter news: ", "", 
